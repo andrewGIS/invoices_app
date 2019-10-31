@@ -1,5 +1,5 @@
-//var server = "https://invoices-app-andrew.herokuapp.com";
-var server = "http://localhost:3000";
+var server = "https://invoices-app-andrew.herokuapp.com";
+//var server = "http://localhost:3000";
 var selected_field = "";
 var selected_direction = "asc";
 var selected_text = "";
