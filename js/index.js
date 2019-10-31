@@ -29,12 +29,12 @@ function main_function() {
     $(".select_direction").hide();
 
     $('#datetimepicker_create').datetimepicker({
-        format: 'DD.MM.YYYY',
+        format:  'YYYY.MM.DD',
         locale: 'ru'
     });
 
     $('#datetimepicker_supply').datetimepicker({
-        format: 'DD.MM.YYYY',
+        format: 'YYYY.MM.DD',
         locale: 'ru'
     });
 
