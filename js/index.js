@@ -1,5 +1,5 @@
-var server = "https://invoices-app-andrew.herokuapp.com";
-//var server = "http://localhost:3000";
+//var server = "https://invoices-app-andrew.herokuapp.com";
+var server = "http://localhost:3000";
 var selected_field = "";
 var selected_direction = "asc";
 var selected_text = "";
@@ -16,7 +16,7 @@ function return_html_present(invoice) {
         "<td>" + invoice.date_supply + "</td>" +
         "<td>" + invoice.comment + "</td>" +
         "<td><button delete_id=" + invoice.id +
-        " type='button' style='margin:2px;' class='btn btn-danger btn-xs delete_button' onclick='delete_invoice(this)'>Delete</button>" +
+        " type='button' style='margin-right:2px;' class='btn btn-danger btn-xs delete_button' onclick='delete_invoice(this)'>Delete</button>" +
         "<button edit_id=" + invoice.id +
         " class='btn btn-warning btn-xs edit_button' onclick='edit_invoice(this)'>Edit</button></td>" +
         "</tr>"

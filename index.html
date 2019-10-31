@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
   <script src="js/jquery.js"></script>
@@ -23,53 +25,50 @@
     </button>
   </blockquote>
 
-  <form class="form-inline">
-    
-    <div class="form-group col-xs-5">
+  <form class="form-inline" class="row">
+
+    <div class="form-group col-xs-6 ">
       <label for="search_text">Search:</label>
-      <input style="width:80%;" id = "search_text"  type="text" class="form-control  search_text" placeholder="Search text">
+      <input style="width: 80%;" id="search_text" type="text" class="form-control search_text" placeholder="Search text">
     </div>
-    <label> Filter by: </label>
-    <div class="form-group">
-        <span class="input-group-btn ">
-          <select class="form-control select_filter">
-            <option selected="selected" value="">All</option>
-            <option value="date_created">Create date</option>
-            <option value="number">Number</option>
-            <option value="date_supply">Supply date</option>
-            <option value="comment">Comment</option>
-          </select>
-        </span>
-      </div>
-    <label style="margin-left: 10px;">Order by:</label>
-    <div class="form-group">
-      <span class="input-group-btn ">
-        <select class="form-control select_field">
-          <option selected="selected" value="">None</option>
-          <option value="date_created">Create date</option>
-          <option value="number">Number</option>
-          <option value="date_supply">Supply date</option>
-        </select>
-      </span>
+
+
+    <div class="form-group col-xs-3 " >
+      <label> Filter by: </label>
+      <select class="form-control select_filter">
+        <option selected="selected" value="">All</option>
+        <option value="date_created">Create date</option>
+        <option value="number">Number</option>
+        <option value="date_supply">Supply date</option>
+        <option value="comment">Comment</option>
+      </select>
     </div>
-    <div class ="form-group">
-        <span class="input-group-btn ">
-            <select class="form-control select_direction">
-              <option value="asc">Asc</option>
-              <option value="desc">Desc</option>
-            </select>
-          </span>
+
+    <div class="form-group col-xs-3 ">
+      <label>Order by:</label>
+      <select class="form-control select_field">
+        <option selected="selected" value="">None</option>
+        <option value="date_created">Create date</option>
+        <option value="number">Number</option>
+        <option value="date_supply">Supply date</option>
+      </select>
+      <select class="form-control select_direction">
+        <option value="asc">Asc</option>
+        <option value="desc">Desc</option>
+      </select>
     </div>
 
   </form>
 
-  <h3>Invoices</h3>
+  <div>
+    <h3>Invoices</h3>
+  </div>
   <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th scope="col" style="width:15.33%">Create date</th>
         <th scope="col">Number</th>
-        <th scope="col"style="width:15.33%">Supply date</th>
+        <th scope="col" style="width:15.33%">Supply date</th>
         <th scope="col">Comment</th>
         <th scope="col" style="width:10.33%"></th>
       </tr>
