@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "a74f083b-a6be-4cdd-8ac8-ba0fe160b9a5",
+		"name": "invoice_app_test_add",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Filtered invoice",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "91c2b143-a02a-4a6c-a998-f0bba740273c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://invoices-app-andrew.herokuapp.com/invoices/?{{field_name}}_like={{field_value}}",
+					"protocol": "https",
+					"host": [
+						"invoices-app-andrew",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "{{field_name}}_like",
+							"value": "{{field_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8914df54-f1d9-4111-94a6-7f73f7050948",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6b415c39-e27d-4893-a543-1516fefdaeb7",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Filtered invoice\", function () {",
+					"    console.log(pm.response.json())",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "20182f70-9feb-4727-9884-3846b6d5d9d3",
+			"key": "field_name",
+			"value": "number",
+			"type": "string"
+		},
+		{
+			"id": "37674890-be71-4af1-9178-be6cf742076a",
+			"key": "field_value",
+			"value": "747722",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
